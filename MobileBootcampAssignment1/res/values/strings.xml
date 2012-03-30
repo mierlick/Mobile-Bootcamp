@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World!</string>
+    <string name="app_name">MIE MBC Assignment 1</string>
+    <string name="view_run_times">View Run Times</string>
+    <string name="exit">Exit</string>
+    <string name="statsPage">Stats Page</string>
+    <string name="homePage">Home Page</string>
+    <string name="flipper">Flipper</string>
+
+</resources>
