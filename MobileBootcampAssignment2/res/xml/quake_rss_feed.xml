@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<cursor-adapter xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.mie.mbc.assignment2"
+    app:selection="/rss/channel/item"
+    app:layout="@layout/quake_rss_item">
+
+    <bind app:from="/title" app:to="@id/quake_title" app:as="string" />
+    
+    <bind app:from="/dc:subject" app:to="@id/quake_magnitude" app:as="string">
+        <transform app:withExpression="Magnitude: {/dc:subject}" />
+    </bind>
+    
+    <bind app:from="/geo:lat" app:to="@id/quake_latitude" app:as="string">
+        <transform app:withExpression="Latitude: {/geo:lat}" />
+    </bind>
+    
+    <bind app:from="/geo:long" app:to="@id/quake_longitude" app:as="string">
+        <transform app:withExpression="Longitude: {/geo:long}" />
+    </bind>
+    
+    <bind app:as="tag" app:from="/link" app:to="@id/quake_item_layout" />
+    
+    <bind app:from="/description" app:to="@id/quake_date" app:as="string">
+         <transform app:withClass="com.mie.mbc.assignment2.DateExtract"/>
+    </bind>
+
+</cursor-adapter>
