@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MIE Maps</string>
+    <string name="search_text">Enter Zipcode or Locality</string>
+    <string name="search_button">Search</string>
+    <string name="no_results">No Results Found</string>
+    <string name="exit">Exit</string>
+    <string name="searching">Searching</string>
+    <string name="Open">open</string>
+
+</resources>
