@@ -1,6 +1,7 @@
 package com.mie.mbc.maps.entities;
 
 import java.io.Serializable;
+import java.text.NumberFormat;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
@@ -148,6 +149,7 @@ public class ZipCode implements Serializable {
 	
 	public String toFormattedString () {
 		StringBuilder string = new StringBuilder();
+		NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
 		
 		string.append("\nLatitude: ");
 		string.append(getLatitude());
@@ -166,7 +168,7 @@ public class ZipCode implements Serializable {
 		string.append(getHousingUnits());
 		
 		string.append("\nIncome: ");
-		string.append(getIncome());
+		string.append( currencyFormatter.format(getIncome()) );
 		
 		string.append("\nMilitary Restriction Codes: ");
 		string.append(getMilitaryRestrictionCodes());
