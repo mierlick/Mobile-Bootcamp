@@ -91,9 +91,4 @@ public class MIEUSGSDisplayActivity extends ListActivity {
 	private void exit() {
 		System.exit(0);
 	}
-
-	@Override
-	public void onBackPressed() {
-		// Do Nothing
-	}
 }
