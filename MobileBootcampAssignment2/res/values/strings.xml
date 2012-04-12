@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, MIEUSGSDisplayActivity!</string>
-    <string name="app_name">MIE MBC Assignment 2</string>
+    <string name="app_name">MIE Quakes</string>
     <string name="loading_rss_feed">Loading Quake Data</string>
     <string name="refresh">Refresh Data</string>
     <string name="exit">Exit</string>
